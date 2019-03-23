@@ -9,11 +9,11 @@ namespace UniHax
 {
     class PythonInterface
     {
-        private Mappings xmlData;
 
         [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public string GetBestFit(char character)
+        public static string GetBestFit(char character)
         {
+            Mappings xmlData = new Mappings();
             UniChar unicode = new UniChar();
             unicode.ConvertCharacterToCodePoint(character);
 
@@ -26,8 +26,9 @@ namespace UniHax
         }
 
         [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public string GetNormalized(char character)
+        public static string GetNormalized(char character)
         {
+            Mappings xmlData = new Mappings();
             UniChar unicode = new UniChar();
             unicode.ConvertCharacterToCodePoint(character);
 
@@ -40,8 +41,9 @@ namespace UniHax
         }
 
         [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public string GetUnicode(char character)
+        public static string GetUnicode(char character)
         {
+            Mappings xmlData = new Mappings();
             UniChar unicode = new UniChar();
             unicode.ConvertCharacterToCodePoint(character);
 
