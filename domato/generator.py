@@ -18,10 +18,13 @@
 
 
 from __future__ import print_function
+import grammar
 import os
 import re
 import random
 import sys
+
+from ctypes import cdll
 
 from grammar import Grammar
 
@@ -29,6 +32,12 @@ _N_MAIN_LINES = 1000
 _N_EVENTHANDLER_LINES = 500
 
 _N_ADDITIONAL_HTMLVARS = 5
+
+#Setup DLL
+dll = cdll.LoadLibrary("D:\\UniHax.dll")
+x = dll.GetBestFit('a')
+
+print(x)
 
 # A map from tag name to corresponding type for HTML tags
 _HTML_TYPES = {
@@ -318,6 +327,13 @@ def check_grammar(grammar):
             if tagname not in grammar._creators:
                 print('No creators for type ' + tagname)
 
+def unicode_fuzz_generated_sample(sample):
+    asd = 1
+
+
+
+
+    return asd
 
 def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
     """Parses grammar rules from string.

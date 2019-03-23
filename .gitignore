@@ -108,3 +108,7 @@ Backup*/
 UpgradeLog*.XML
 
 \.vs/UniHax/v15/Server/sqlite3/
+
+domato/\.vs/
+
+domato/__pycache__/

@@ -10,7 +10,7 @@ namespace UniHax
     class PythonInterface
     {
 
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
+        [DllExport("bestfit", CallingConvention = CallingConvention.StdCall)]
         public static string GetBestFit(char character)
         {
             Mappings xmlData = new Mappings();
@@ -25,7 +25,7 @@ namespace UniHax
             return bestFitData.ElementAtOrDefault(size);
         }
 
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
+        [DllExport("normal", CallingConvention = CallingConvention.StdCall)]
         public static string GetNormalized(char character)
         {
             Mappings xmlData = new Mappings();
@@ -40,7 +40,7 @@ namespace UniHax
             return normalizedData.ElementAtOrDefault(size);
         }
 
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
+        [DllExport("unicode", CallingConvention = CallingConvention.StdCall)]
         public static string GetUnicode(char character)
         {
             Mappings xmlData = new Mappings();
