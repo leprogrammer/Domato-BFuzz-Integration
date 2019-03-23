@@ -43,7 +43,6 @@ namespace UniHax
             get
             {
                 return String.Format("Bestfit mapping error:{0}", messageDetails);
-                return base.Message;
             }
         }
     }

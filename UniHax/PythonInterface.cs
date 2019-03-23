@@ -1,6 +1,8 @@
-﻿using System;
+﻿using RGiesecke.DllExport;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace UniHax
@@ -9,6 +11,7 @@ namespace UniHax
     {
         private Mappings xmlData;
 
+        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
         public string GetBestFit(char character)
         {
             UniChar unicode = new UniChar();
@@ -22,6 +25,7 @@ namespace UniHax
             return bestFitData.ElementAtOrDefault(size);
         }
 
+        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
         public string GetNormalized(char character)
         {
             UniChar unicode = new UniChar();
@@ -35,6 +39,7 @@ namespace UniHax
             return normalizedData.ElementAtOrDefault(size);
         }
 
+        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
         public string GetUnicode(char character)
         {
             UniChar unicode = new UniChar();
