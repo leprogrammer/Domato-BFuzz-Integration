@@ -117,5 +117,13 @@ namespace UniHax.Properties {
                 return ResourceManager.GetString("unicode", resourceCulture);
             }
         }
+
+        internal static string expandedUnicode
+        {
+            get
+            {
+                return ResourceManager.GetString("expandedUnicode", resourceCulture);
+            }
+        }
     }
 }

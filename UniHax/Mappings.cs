@@ -41,7 +41,7 @@ namespace UniHax
         private XDocument xDocBestfit;
         // This stores the entire Bestfit XML as an in memory database
         private XDocument xDocUnicode;
-        
+
         #endregion
 
         #region Ctor(s)
@@ -65,6 +65,12 @@ namespace UniHax
             set { xDocUnicode = value; }
         }
 
+        public XDocument XDocExpandedUnicode
+        {
+            get { return XDocExpandedUnicode; }
+            set { XDocExpandedUnicode = value; }
+        }
+
         #endregion
 
         private void Init()
@@ -73,11 +79,13 @@ namespace UniHax
             var sBestfitXml = Resources.bestfit;
             // The unicode.xml file embedded as a resource
             var sUnicodeXml = Resources.unicode;
-            
+
+            var expandedUnicode = Resources.expandedUnicode;
+
             // Build the in-memory databases
             XDocBestfit = XDocument.Parse(sBestfitXml);
             XDocUnicode = XDocument.Parse(sUnicodeXml);
-
+            XDocExpandedUnicode = XDocument.Parse(expandedUnicode);
 
         }
 
@@ -93,7 +101,7 @@ namespace UniHax
             try
             {
                 query = (from mapping in XDocBestfit.Descendants("Mapping")
-                             select (string)mapping.Element("Charset").Value).Distinct();
+                         select (string)mapping.Element("Charset").Value).Distinct();
             }
             catch (Exception)
             {
@@ -125,7 +133,7 @@ namespace UniHax
         /// <param name="lBestFit">Reference to a List you want to populate with data.</param>
         /// <param name="sCharset">An optional charset to filter results by.
         /// </param>
-        public void BuildBestfitTable(char cAscii, 
+        public void BuildBestfitTable(char cAscii,
             ref List<BestFitMapping> lBestFit,
             string sCharset = "")
         {
@@ -137,14 +145,14 @@ namespace UniHax
             {
                 query = from mapping in XDocBestfit.Descendants("Mapping")
                         where (string)mapping.Element("Ascii") == uc.CodePoint
-                        select mapping; 
+                        select mapping;
             }
             else
             {
                 query = (from mapping in XDocBestfit.Descendants("Mapping")
-                            where (string)mapping.Element("Ascii") == uc.CodePoint &&
-                                  (string)mapping.Element("Charset") == sCharset
-                            select mapping);
+                         where (string)mapping.Element("Ascii") == uc.CodePoint &&
+                               (string)mapping.Element("Charset") == sCharset
+                         select mapping);
             }
 
             var count = query.Count();
@@ -197,7 +205,7 @@ namespace UniHax
                 um.Ascii = item.Element("Ascii").Value;
                 um.Unicode = item.Element("Unicode").Value;
                 um.Character = uc2.ConvertCodePointToString(um.Unicode);
-                um.Transform= item.Element("Transform").Value;
+                um.Transform = item.Element("Transform").Value;
                 um.Name = item.Element("Name").Value;
                 lTransformations.Add(um);
             }
@@ -253,11 +261,11 @@ namespace UniHax
             // If a charset wasn't specified, filter by the ASCII character
             if (String.IsNullOrEmpty(sCharset))
             {
-                
+
                 query = (from mapping in XDocBestfit.Descendants("Mapping")
-                                       where 
-                                        (string)mapping.Element("Ascii") == uc.CodePoint
-                                       select mapping.Element("Unicode").Value);
+                         where
+                          (string)mapping.Element("Ascii") == uc.CodePoint
+                         select mapping.Element("Unicode").Value);
             }
 
             // else filter by the charset too
@@ -265,10 +273,10 @@ namespace UniHax
             {
 
                 query = (from mapping in XDocBestfit.Descendants("Mapping")
-                                       where
-                                           (string)mapping.Element("Ascii") == "0043" &&
-                                           (string)mapping.Element("Charset") == sCharset
-                                       select mapping.Element("Unicode").Value);
+                         where
+                             (string)mapping.Element("Ascii") == "0043" &&
+                             (string)mapping.Element("Charset") == sCharset
+                         select mapping.Element("Unicode").Value);
             }
 
             List<String> data = new List<string>();
@@ -357,6 +365,27 @@ namespace UniHax
                 data.Add(item);
             }
             return data;
+        }
+
+        public String GetExpandedUnicodeCharacter(char ascii)
+        {
+            IEnumerable<String> searchResults;
+            UniChar unicode = new UniChar();
+            unicode.CodePoint = unicode.GetCodePoint(ascii);
+
+            searchResults = (from mapping in XDocExpandedUnicode.Descendants("Mapping")
+                             select mapping.Element("Unicode").Value);
+
+            List<String> data = new List<string>();
+            foreach (var item in searchResults.Distinct())
+            {
+                data.Add(item);
+            }
+
+            Random rand = new Random();
+            int size = rand.Next(data.Count());
+
+            return data.ElementAtOrDefault(size);
         }
     }
 }
