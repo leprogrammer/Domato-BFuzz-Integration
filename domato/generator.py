@@ -353,11 +353,11 @@ def fuzzHTML_File(file):
 
     for character in resultList:
         randInt = random.randint(0, 100)
-        if randInt > 0 and randInt < 15:
+        if randInt > 0 and randInt < 5:
             resultList[i] = getBestFit(character)
         i = i + 1
 
-    temp = str(resultList)
+    temp = ''.join(resultList)
 
     return temp
 
@@ -393,8 +393,12 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
     )
     generate_html_elements(htmlctx, _N_ADDITIONAL_HTMLVARS)
 
+    html = fuzzHTML_File(html)
+
     result = result.replace('<cssfuzzer>', css)
     result = result.replace('<htmlfuzzer>', html)
+
+    #result = fuzzHTML_File(result)
 
     handlers = False
     while '<jsfuzzer>' in result:
@@ -408,8 +412,6 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
             generate_function_body(jsgrammar, htmlctx, numlines),
             1
         )
-
-    result = fuzzHTML_File(result)
 
     return result
 
@@ -459,7 +461,7 @@ def generate_samples(grammar_dir, outfiles):
         if result is not None:
             print('Writing a sample to ' + outfile)
             try:
-                f = open(outfile, 'w', encoding='utf8')
+                f = open(outfile, 'w', encoding='utf-8')
                 f.write(result)
                 f.close()
             except IOError:
@@ -516,5 +518,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-main()
