@@ -18,16 +18,16 @@ def getExpandedUnicode():
 
     if len(unicodeList) > 0:
         randIndex = random.randint(0, len(unicodeList) - 1)
-        print(unicodeList[randIndex])
+        #print(unicodeList[randIndex])
         return unicodeList[randIndex]
     else:
-        print('\\u0263'.encode('utf-8').decode('unicode_escape'))
+        #print('\\u0263'.encode('utf-8').decode('unicode_escape'))
         return '\\u0263'.encode('utf-8').decode('unicode_escape')
 
 def getBestFit(character):
     bestfitList = []
     charValue= ord(character)
-    print(charValue)
+    #print(charValue)
     for unicode in bestFitRoot.findall('Mapping'):
         asciiValue = int(unicode.find('Ascii').text[2:], 16)
         if charValue == asciiValue:
@@ -44,10 +44,8 @@ def getBestFit(character):
 
     if len(bestfitList) > 0:
         randIndex = random.randint(0, len(bestfitList) - 1)
-        print(bestfitList[randIndex])
+        #print(bestfitList[randIndex])
         return bestfitList[randIndex]
     else:
-        print('\\u0263'.encode('utf-8').decode('unicode_escape'))
-        return '\\u0263'.encode('utf-8').decode('unicode_escape')
-
-getBestFit('a')
+        #print('\\u0263'.encode('utf-8').decode('unicode_escape'))
+        return character

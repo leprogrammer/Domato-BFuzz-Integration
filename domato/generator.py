@@ -348,9 +348,18 @@ def check_grammar(grammar):
                 print('No creators for type ' + tagname)
 
 def fuzzHTML_File(file):
-    print(file)
+    resultList = list(file)
+    i = 0
 
-    result = getBestFit(file)
+    for character in resultList:
+        randInt = random.randint(0, 100)
+        if randInt > 0 and randInt < 15:
+            resultList[i] = getBestFit(character)
+        i = i + 1
+
+    temp = str(resultList)
+
+    return temp
 
 
 def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
@@ -400,8 +409,7 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
             1
         )
 
-    for character in result:
-        fuzzHTML_File(character)
+    result = fuzzHTML_File(result)
 
     return result
 
@@ -451,7 +459,7 @@ def generate_samples(grammar_dir, outfiles):
         if result is not None:
             print('Writing a sample to ' + outfile)
             try:
-                f = open(outfile, 'w')
+                f = open(outfile, 'w', encoding='utf8')
                 f.write(result)
                 f.close()
             except IOError:
@@ -508,3 +516,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+main()
