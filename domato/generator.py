@@ -22,8 +22,37 @@ import os
 import re
 import random
 import sys
+import comtypes
+import clr
 
 from grammar import Grammar
+from xmlparsing import *
+
+sys.path.append("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release")
+clr.AddReference("UniHax")
+
+#from UniHax import *
+#PythonInterface.FindBestFit("z")
+#x = PythonInterface.GetBestFit()
+#print(x)
+
+
+#dll = cdll.LoadLibrary("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release\\UniHax.dll")
+#dll.bestfitResults.argtypes = [POINTER(VARIANT)]
+#v = VARIANT()
+#dll.test(120)
+
+#dll.bestfit(120)
+#dll.bestfitResults(v)
+#for x in v.value:
+#    print(x)
+
+#dll.unicode.argtypes = [POINTER(VARIANT)]
+#x = VARIANT()
+
+#dll.unicode(x)
+#for iter in x.value:
+ #   print(iter)
 
 _N_MAIN_LINES = 1000
 _N_EVENTHANDLER_LINES = 500
@@ -318,6 +347,11 @@ def check_grammar(grammar):
             if tagname not in grammar._creators:
                 print('No creators for type ' + tagname)
 
+def fuzzHTML_File(file):
+    print(file)
+
+    result = getBestFit(file)
+
 
 def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
     """Parses grammar rules from string.
@@ -365,6 +399,9 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
             generate_function_body(jsgrammar, htmlctx, numlines),
             1
         )
+
+    for character in result:
+        fuzzHTML_File(character)
 
     return result
 

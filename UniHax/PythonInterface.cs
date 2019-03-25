@@ -7,47 +7,49 @@ using System.Text;
 
 namespace UniHax
 {
-    class PythonInterface
+    public class PythonInterface
     {
-
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public static string GetBestFit(char character)
+        public static string results;
+        public static Mappings xmlData = new Mappings();
+        
+        public static void FindBestFit(string asciiValue)
         {
-            Mappings xmlData = new Mappings();
-            UniChar unicode = new UniChar();
-            unicode.ConvertCharacterToCodePoint(character);
+            char ascii = asciiValue.ElementAtOrDefault(0);
 
-            List<String> bestFitData = xmlData.GetBestfitMappings(character);
+            List<String> bestFitData = xmlData.GetBestfitMappings(ascii);
 
             Random rand = new Random();
-            int size = rand.Next(bestFitData.Count());
+            int randIndex = rand.Next(0, bestFitData.Count());
 
-            return bestFitData.ElementAtOrDefault(size);
+            results = bestFitData.ElementAtOrDefault(randIndex);
         }
 
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public static string GetNormalized(char character)
+        public static string GetBestFit()
         {
-            Mappings xmlData = new Mappings();
-            UniChar unicode = new UniChar();
-            unicode.ConvertCharacterToCodePoint(character);
-
-            List<String> normalizedData = xmlData.GetNormalizationMappings(character);
-
-            Random rand = new Random();
-            int size = rand.Next(normalizedData.Count());
-
-            return normalizedData.ElementAtOrDefault(size);
+            return results;
         }
 
-        [DllExport("add", CallingConvention = CallingConvention.StdCall)]
-        public static string GetUnicode(char character)
-        {
-            Mappings xmlData = new Mappings();
-            UniChar unicode = new UniChar();
-            unicode.ConvertCharacterToCodePoint(character);
+        //[DllExport("normal", CallingConvention = CallingConvention.Cdecl)]
+        //public static void GetNormalized(char character, ref object returnedValue)
+        //{
+        //    Mappings xmlData = new Mappings();
+        //    UniChar unicode = new UniChar();
+        //    unicode.ConvertCharacterToCodePoint(character);
 
-            return xmlData.GetExpandedUnicodeCharacter(character);
-        }
+        //    List<String> normalizedData = xmlData.GetNormalizationMappings(character);
+
+        //    Random rand = new Random();
+        //    int size = rand.Next(normalizedData.Count());
+
+        //    returnedValue = new string[] { normalizedData.ElementAtOrDefault(size) };
+        //}
+
+        //[DllExport("unicode", CallingConvention = CallingConvention.Cdecl)]
+        //public static void GetUnicode(ref object returnedValue)
+        //{
+        //    Mappings xmlData = new Mappings();
+
+        //    returnedValue = new string[] { xmlData.GetExpandedUnicodeCharacter() };
+        //}
     }
 }
