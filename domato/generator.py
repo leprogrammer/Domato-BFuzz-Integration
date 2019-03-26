@@ -31,7 +31,8 @@ from xmlparsing import *
 sys.path.append("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release")
 clr.AddReference("UniHax")
 
-#from UniHax import *
+from UniHax import *
+
 #PythonInterface.FindBestFit("z")
 #x = PythonInterface.GetBestFit()
 #print(x)
@@ -360,6 +361,35 @@ def fuzzHTML_File(file):
     temp = ''.join(resultList)
 
     return temp
+
+
+def insertJoinerUnicode(file, index):
+    corruptString = Fuzzer.uWordJoiner
+
+    result = file[:index] + corruptString + file[index:]
+
+    return result
+
+def insertRightLeftReadingUnicode(file, index):
+    corruptString = Fuzzer.uRLO
+
+    result = file[:index] + corruptString + file[index:]
+
+    return result
+
+def insertVowelSepUnicode(file, index):
+    corruptString = Fuzzer.uMVS
+
+    result = file[:index] + corruptString + file[index:]
+
+    return result
+
+def insertPrivateUseAreaUnicode(file, index):
+    corruptString = Fuzzer.uPrivate
+
+    result = file[:index] + corruptString + file[index:]
+
+    return result
 
 
 def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
