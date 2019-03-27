@@ -108,3 +108,9 @@ Backup*/
 UpgradeLog*.XML
 
 \.vs/UniHax/v15/Server/sqlite3/
+
+test_case/
+
+test_case_ExtraLarge/
+
+test_case_Large/
