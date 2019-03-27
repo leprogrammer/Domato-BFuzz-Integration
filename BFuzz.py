@@ -12,8 +12,9 @@ def runWebTest():
     browserType = input('>>')
     timeout = input(
         "Duration the browser process should wait before stopping(>=15 seconds to ensure full load of page):")
+    browserType = int(browserType)
     checkValidBrowserType(browserType)
-    for root, folders, fileNames in os.walk("recurve"):
+    for root, folders, fileNames in os.walk("test_case"):
         for fileName in fileNames:
             if not fileName.endswith('.html'):
                 continue
@@ -22,12 +23,13 @@ def runWebTest():
                 setupExploit(dir_path, fileName, processCommand, root)
                 runExploit(processCommand, timeout)
             else:
-                print "Invalid Browser Type"
+                print("Invalid Browser Type")
 
 
 def runExploit(processCommand, timeout):
-    print "Executing Command: " + " ".join(processCommand)
-    process = subprocess.Popen(processCommand)
+    timeout = int(timeout)
+    print("Executing Command: " + " ".join(processCommand))
+    process = subprocess.Popen(processCommand, shell=True)
     sleep(timeout)
     # print "Killing browser process.... bye bye"
     sleep(3)
@@ -35,16 +37,18 @@ def runExploit(processCommand, timeout):
 
 def setupExploit(dir_path, fileName, processCommand, root):
     filePath = os.path.join(dir_path, root, fileName)
+    filePath = filePath.replace("\\", "\\\\\\")
     filePath = "file://" + filePath
-    print "Testing with exploit:" + filePath
+    print("Testing with exploit:" + filePath)
     processCommand.append(filePath)
 
 
 def getBrowserApplication(browserType):
+    processCommand = ['start']
     if browserType == 1:
-        processCommand = ['google-chrome']
+        processCommand.append('chrome')
     elif browserType == 2:
-        processCommand = ['firefox', '-new-tab']
+        processCommand.append('firefox')
     else:
         processCommand = None
     return processCommand
