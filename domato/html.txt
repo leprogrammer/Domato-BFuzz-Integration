@@ -52,6 +52,7 @@
 <head> = <newline><lt>head<gt><newline><lt>style<gt><newline>/*begincss*/<newline><lt>cssfuzzer<gt>/*endcss*/<newline><lt>/style<gt><newline><lt>script<gt><newline><lt>jsfuzzer<gt><newline><lt>/script<gt><newline><lt>/head<gt>
 <body> = <newline><lt>body onload=jsfuzzer()<gt><newline><lt>!--beginhtml--<gt><bodyelements><lt>!--endhtml--<gt><newline><lt>/body<gt>
 
+
 <attributes> = <attribute> <attribute> <attribute> <attribute> <attribute>
 
 <bodyelements> = <newline><element><newline><element><newline><element><newline><element><newline><element><newline><element><newline><element><newline><element><newline><element><newline><element><newline>
@@ -231,6 +232,8 @@
 <element> = <HTMLVideoElement>
 <element> = <HTMLContentElement>
 <element> = <HTMLShadowElement>
+<element> = <HTMLUnicodeElement>
+<element> = <HTMLScript>
 #<element> = <colgroupelement>
 
 <element> = <svgelement_svg>
@@ -1092,6 +1095,8 @@
 <HTMLVideoElement> = <lt>video <video_attributes> <attributes><gt><mediachildren><lt>/video<gt>
 <otherelement> = <lt>wbr <wbr_attributes> <attributes><gt><innerelements><lt>/wbr<gt>
 <otherelement> = <lt>xmp <xmp_attributes> <attributes><gt><htmlsafestring min=32 max=126><lt>/xmp<gt>
+<HTMLUnicodeElement> = <lt>p<gt>UnicodeTesting<lt>/p<gt>
+<HTMLScript> = <lt>script<gt> var x = "vulnerable@<lt>/script<gt><lt>script<gt>alert('HACKED!')<lt>/script<gt>" <lt>/script<gt>
 
 !include svg.txt
 !include svgattrvalues.txt
