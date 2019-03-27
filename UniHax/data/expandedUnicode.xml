@@ -1,66 +1,242 @@
 <Bestfit>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11800</Unicode>
+    <Name>DOGRA LETTER A</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11801</Unicode>
+    <Name>DOGRA LETTER AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11802</Unicode>
+    <Name>DOGRA LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11803</Unicode>
+    <Name>DOGRA LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11804</Unicode>
+    <Name>DOGRA LETTER U</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11805</Unicode>
+    <Name>DOGRA LETTER UU</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11806</Unicode>
+    <Name>DOGRA LETTER E</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11807</Unicode>
+    <Name>DOGRA LETTER AI</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11808</Unicode>
+    <Name>DOGRA LETTER O</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11809</Unicode>
+    <Name>DOGRA LETTER AU</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180A</Unicode>
+    <Name>DOGRA LETTER KA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180B</Unicode>
+    <Name>DOGRA LETTER KHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180C</Unicode>
+    <Name>DOGRA LETTER GA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180D</Unicode>
+    <Name>DOGRA LETTER GHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180E</Unicode>
+    <Name>DOGRA LETTER NGA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180F</Unicode>
+    <Name>DOGRA LETTER CA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11810</Unicode>
+    <Name>DOGRA LETTER CHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11811</Unicode>
+    <Name>DOGRA LETTER JA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11812</Unicode>
+    <Name>DOGRA LETTER JHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11813</Unicode>
+    <Name>DOGRA LETTER NYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11814</Unicode>
+    <Name>DOGRA LETTER TTA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11815</Unicode>
+    <Name>DOGRA LETTER TTHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11816</Unicode>
+    <Name>DOGRA LETTER DDA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11817</Unicode>
+    <Name>DOGRA LETTER DDHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11818</Unicode>
+    <Name>DOGRA LETTER NNA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11819</Unicode>
+    <Name>DOGRA LETTER TA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181A</Unicode>
+    <Name>DOGRA LETTER THA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181B</Unicode>
+    <Name>DOGRA LETTER DA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181C</Unicode>
+    <Name>DOGRA LETTER DHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181D</Unicode>
+    <Name>DOGRA LETTER NA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181E</Unicode>
+    <Name>DOGRA LETTER PA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181F</Unicode>
+    <Name>DOGRA LETTER PHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11820</Unicode>
+    <Name>DOGRA LETTER BA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11821</Unicode>
+    <Name>DOGRA LETTER BHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11822</Unicode>
+    <Name>DOGRA LETTER MA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11823</Unicode>
+    <Name>DOGRA LETTER YA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11824</Unicode>
+    <Name>DOGRA LETTER RA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11825</Unicode>
+    <Name>DOGRA LETTER LA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11826</Unicode>
+    <Name>DOGRA LETTER VA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11827</Unicode>
+    <Name>DOGRA LETTER SHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11828</Unicode>
+    <Name>DOGRA LETTER SSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11829</Unicode>
+    <Name>DOGRA LETTER SA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182A</Unicode>
+    <Name>DOGRA LETTER HA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182B</Unicode>
+    <Name>DOGRA LETTER RRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182C</Unicode>
+    <Name>DOGRA VOWEL SIGN AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182D</Unicode>
+    <Name>DOGRA VOWEL SIGN I</Name>
   </Mapping>
   <Mapping>
     <Unicode>1182E</Unicode>
     <Name>DOGRA VOWEL SIGN II</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1182F</Unicode>
+    <Name>DOGRA VOWEL SIGN U</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11830</Unicode>
+    <Name>DOGRA VOWEL SIGN UU</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11831</Unicode>
+    <Name>DOGRA VOWEL SIGN VOCALIC R</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11832</Unicode>
+    <Name>DOGRA VOWEL SIGN VOCALIC RR</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11833</Unicode>
+    <Name>DOGRA VOWEL SIGN E</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11834</Unicode>
+    <Name>DOGRA VOWEL SIGN AI</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11835</Unicode>
+    <Name>DOGRA VOWEL SIGN O</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11836</Unicode>
+    <Name>DOGRA VOWEL SIGN AU</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11837</Unicode>
+    <Name>DOGRA VOWEL ANUSVARA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11838</Unicode>
+    <Name>DOGRA VOWEL VISARGA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11839</Unicode>
+    <Name>DOGRA VOWEL VIRAMA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1183A</Unicode>
+    <Name>DOGRA VOWEL NUKTA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
-  </Mapping>
-  <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1183B</Unicode>
+    <Name>DOGRA ABBREVIATION SIGN</Name>
   </Mapping>
 </Bestfit>
