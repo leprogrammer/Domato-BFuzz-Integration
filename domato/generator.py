@@ -349,6 +349,7 @@ def check_grammar(grammar):
                 print('No creators for type ' + tagname)
 
 def fuzzHTML_File(file):
+    size = len(file)
     resultList = list(file)
     i = 0
 
@@ -359,6 +360,18 @@ def fuzzHTML_File(file):
         i = i + 1
 
     temp = ''.join(resultList)
+
+    index = random.randint(0, size)
+    chance = random.randint(0, 100)
+
+    if chance > 25 and chance < 30:
+        temp = insertJoinerUnicode(temp, index)
+    elif chance > 5 and chance < 9:
+        temp = insertPrivateUseAreaUnicode(temp, index)
+    elif chance > 35 and chance < 40:
+        temp = insertRightLeftReadingUnicode(temp, index)
+    elif chance > 78 and chance < 87:
+        temp = insertVowelSepUnicode(temp, index)
 
     return temp
 

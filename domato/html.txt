@@ -1095,8 +1095,8 @@
 <HTMLVideoElement> = <lt>video <video_attributes> <attributes><gt><mediachildren><lt>/video<gt>
 <otherelement> = <lt>wbr <wbr_attributes> <attributes><gt><innerelements><lt>/wbr<gt>
 <otherelement> = <lt>xmp <xmp_attributes> <attributes><gt><htmlsafestring min=32 max=126><lt>/xmp<gt>
-<HTMLUnicodeElement> = <lt>p<gt> UnicodeTesting <lt>/p<gt>
-<HTMLScript> = <lt>script<gt> var x = "vulernable@</script><script>alert('HACKED!')</script>" <lt>/script<gt>
+<HTMLUnicodeElement> = <lt>p<gt>UnicodeTesting<lt>/p<gt>
+<HTMLScript> = <lt>script<gt> var x = "vulnerable@<lt>/script<gt><lt>script<gt>alert('HACKED!')<lt>/script<gt>" <lt>/script<gt>
 
 !include svg.txt
 !include svgattrvalues.txt
