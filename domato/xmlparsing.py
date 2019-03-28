@@ -10,7 +10,7 @@ unicodeRoot = unicodeTree.getroot()
 def getExpandedUnicode():
     unicodeList = []
     for unicode in unicodeRoot.findall('Mapping'):
-        string = '\\u' + unicode.find('Unicode').text
+        string = '\\U' + unicode.find('Unicode').text
             
         unicodeText = string.encode('utf-8')
         decodedValue = unicodeText.decode('unicode_escape')
