@@ -1,66 +1,540 @@
 <Bestfit>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11800</Unicode>
+    <Name>DOGRA LETTER A</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11801</Unicode>
+    <Name>DOGRA LETTER AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11802</Unicode>
+    <Name>DOGRA LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11803</Unicode>
+    <Name>DOGRA LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11804</Unicode>
+    <Name>DOGRA LETTER U</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11805</Unicode>
+    <Name>DOGRA LETTER UU</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11806</Unicode>
+    <Name>DOGRA LETTER E</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11807</Unicode>
+    <Name>DOGRA LETTER AI</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11808</Unicode>
+    <Name>DOGRA LETTER O</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11809</Unicode>
+    <Name>DOGRA LETTER AU</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180A</Unicode>
+    <Name>DOGRA LETTER KA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180B</Unicode>
+    <Name>DOGRA LETTER KHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180C</Unicode>
+    <Name>DOGRA LETTER GA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180D</Unicode>
+    <Name>DOGRA LETTER GHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180E</Unicode>
+    <Name>DOGRA LETTER NGA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1180F</Unicode>
+    <Name>DOGRA LETTER CA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11810</Unicode>
+    <Name>DOGRA LETTER CHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11811</Unicode>
+    <Name>DOGRA LETTER JA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11812</Unicode>
+    <Name>DOGRA LETTER JHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11813</Unicode>
+    <Name>DOGRA LETTER NYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11814</Unicode>
+    <Name>DOGRA LETTER TTA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11815</Unicode>
+    <Name>DOGRA LETTER TTHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11816</Unicode>
+    <Name>DOGRA LETTER DDA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11817</Unicode>
+    <Name>DOGRA LETTER DDHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11818</Unicode>
+    <Name>DOGRA LETTER NNA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11819</Unicode>
+    <Name>DOGRA LETTER TA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181A</Unicode>
+    <Name>DOGRA LETTER THA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181B</Unicode>
+    <Name>DOGRA LETTER DA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181C</Unicode>
+    <Name>DOGRA LETTER DHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181D</Unicode>
+    <Name>DOGRA LETTER NA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181E</Unicode>
+    <Name>DOGRA LETTER PA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1181F</Unicode>
+    <Name>DOGRA LETTER PHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11820</Unicode>
+    <Name>DOGRA LETTER BA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11821</Unicode>
+    <Name>DOGRA LETTER BHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11822</Unicode>
+    <Name>DOGRA LETTER MA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11823</Unicode>
+    <Name>DOGRA LETTER YA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11824</Unicode>
+    <Name>DOGRA LETTER RA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11825</Unicode>
+    <Name>DOGRA LETTER LA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11826</Unicode>
+    <Name>DOGRA LETTER VA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11827</Unicode>
+    <Name>DOGRA LETTER SHA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11828</Unicode>
+    <Name>DOGRA LETTER SSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>11829</Unicode>
+    <Name>DOGRA LETTER SA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182A</Unicode>
+    <Name>DOGRA LETTER HA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182B</Unicode>
+    <Name>DOGRA LETTER RRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182C</Unicode>
+    <Name>DOGRA VOWEL SIGN AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1182D</Unicode>
+    <Name>DOGRA VOWEL SIGN I</Name>
   </Mapping>
   <Mapping>
     <Unicode>1182E</Unicode>
     <Name>DOGRA VOWEL SIGN II</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1182F</Unicode>
+    <Name>DOGRA VOWEL SIGN U</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11830</Unicode>
+    <Name>DOGRA VOWEL SIGN UU</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11831</Unicode>
+    <Name>DOGRA VOWEL SIGN VOCALIC R</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11832</Unicode>
+    <Name>DOGRA VOWEL SIGN VOCALIC RR</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11833</Unicode>
+    <Name>DOGRA VOWEL SIGN E</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11834</Unicode>
+    <Name>DOGRA VOWEL SIGN AI</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11835</Unicode>
+    <Name>DOGRA VOWEL SIGN O</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11836</Unicode>
+    <Name>DOGRA VOWEL SIGN AU</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11837</Unicode>
+    <Name>DOGRA VOWEL ANUSVARA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11838</Unicode>
+    <Name>DOGRA VOWEL VISARGA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>11839</Unicode>
+    <Name>DOGRA VOWEL VIRAMA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1183A</Unicode>
+    <Name>DOGRA VOWEL NUKTA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1183B</Unicode>
+    <Name>DOGRA ABBREVIATION SIGN</Name>
+  </Mapping>
+
+  <Mapping>
+    <Unicode>1E100</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER MA</Name>
   </Mapping>
   <Mapping>
-    <Unicode>1182E</Unicode>
-    <Name>DOGRA VOWEL SIGN II</Name>
+    <Unicode>1E101</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E102</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E103</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E104</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER HA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E105</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E106</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER XA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E107</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NKA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E108</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER CA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E109</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER LA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER SA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER ZA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NCA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10E</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER KA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10F</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER DA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E110</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E111</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E112</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER VA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E113</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTXA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E114</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TXA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E115</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER FA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E116</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER RA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E117</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER QA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E118</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER YA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E119</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NQA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER PA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER XYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NPA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER DLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11E</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NPLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11F</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER HAH</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E120</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER MLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E121</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER PLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E122</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER GA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E123</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER RRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E124</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER A</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E125</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E126</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E127</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER U</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E128</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER O</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E129</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER OO</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E12A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER E</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E12B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER EE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E130</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-B</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E131</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-M</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E132</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-J</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E133</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-V</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E134</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-S</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E135</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-G</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E136</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-D</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E137</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR PERSON</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E138</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR THING</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E139</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR LOCATION</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR ANIMAL</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR INVERTEBRATE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN XW XW</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SYLLABLELENGTHENER</Name>
+  </Mapping>
+
+  <Mapping>
+    <Unicode>1FA70</Unicode>
+    <Name>BALLET SHOES</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA71</Unicode>
+    <Name>ONE-PIECE SWIMSUIT</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA72</Unicode>
+    <Name>BRIEFS</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA73</Unicode>
+    <Name>SHORTS</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA78</Unicode>
+    <Name>DROP OF BLOOD</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA79</Unicode>
+    <Name>ADHESIVE BANDAGE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA7A</Unicode>
+    <Name>STETHOSCOPE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA80</Unicode>
+    <Name>YO-YO</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA81</Unicode>
+    <Name>KITE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA82</Unicode>
+    <Name>PARACHUTE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA90</Unicode>
+    <Name>RINGED PLANET</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA91</Unicode>
+    <Name>CHAIR</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA92</Unicode>
+    <Name>RAZOR</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA93</Unicode>
+    <Name>AXE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA94</Unicode>
+    <Name>DIYA LAMP</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA95</Unicode>
+    <Name>BANJO</Name>
   </Mapping>
 </Bestfit>

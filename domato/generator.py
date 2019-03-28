@@ -357,6 +357,8 @@ def fuzzHTML_File(file):
         randInt = random.randint(0, 100)
         if randInt > 0 and randInt < 5:
             resultList[i] = getBestFit(character)
+        elif randInt > 25 and randInt < 35:
+            resultList[i] = getExpandedUnicode()
         i = i + 1
 
     temp = ''.join(resultList)
