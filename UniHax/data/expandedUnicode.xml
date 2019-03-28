@@ -239,4 +239,302 @@
     <Unicode>1183B</Unicode>
     <Name>DOGRA ABBREVIATION SIGN</Name>
   </Mapping>
+
+  <Mapping>
+    <Unicode>1E100</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER MA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E101</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E102</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E103</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E104</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER HA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E105</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E106</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER XA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E107</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NKA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E108</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER CA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E109</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER LA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER SA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER ZA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NCA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTSA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10E</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER KA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E10F</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER DA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E110</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E111</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E112</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER VA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E113</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NTXA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E114</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER TXA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E115</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER FA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E116</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER RA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E117</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER QA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E118</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER YA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E119</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NQA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER PA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER XYA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NPA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER DLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11E</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER NPLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E11F</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER HAH</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E120</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER MLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E121</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER PLA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E122</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER GA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E123</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER RRA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E124</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER A</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E125</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER AA</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E126</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER I</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E127</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER U</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E128</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER O</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E129</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER OO</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E12A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER E</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E12B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG LETTER EE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E130</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-B</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E131</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-M</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E132</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-J</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E133</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-V</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E134</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-S</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E135</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-G</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E136</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG TONE-D</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E137</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR PERSON</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E138</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR THING</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E139</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR LOCATION</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13A</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR ANIMAL</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13B</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN FOR INVERTEBRATE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13C</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SIGN XW XW</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1E13D</Unicode>
+    <Name>NYIAKENG PUACHUE HMONG SYLLABLELENGTHENER</Name>
+  </Mapping>
+
+  <Mapping>
+    <Unicode>1FA70</Unicode>
+    <Name>BALLET SHOES</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA71</Unicode>
+    <Name>ONE-PIECE SWIMSUIT</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA72</Unicode>
+    <Name>BRIEFS</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA73</Unicode>
+    <Name>SHORTS</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA78</Unicode>
+    <Name>DROP OF BLOOD</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA79</Unicode>
+    <Name>ADHESIVE BANDAGE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA7A</Unicode>
+    <Name>STETHOSCOPE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA80</Unicode>
+    <Name>YO-YO</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA81</Unicode>
+    <Name>KITE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA82</Unicode>
+    <Name>PARACHUTE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA90</Unicode>
+    <Name>RINGED PLANET</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA91</Unicode>
+    <Name>CHAIR</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA92</Unicode>
+    <Name>RAZOR</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA93</Unicode>
+    <Name>AXE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA94</Unicode>
+    <Name>DIYA LAMP</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>1FA95</Unicode>
+    <Name>BANJO</Name>
+  </Mapping>
 </Bestfit>
