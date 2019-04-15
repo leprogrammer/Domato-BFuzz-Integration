@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 import random
 
+import logging 
+
 bestFitTree = ET.parse('xml/unicode.xml')
 bestFitRoot = bestFitTree.getroot()
 

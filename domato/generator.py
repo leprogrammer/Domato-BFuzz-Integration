@@ -24,6 +24,7 @@ import random
 import sys
 import comtypes
 import clr
+import logging
 
 from grammar import Grammar
 from xmlparsing import *
@@ -54,6 +55,9 @@ from UniHax import *
 #dll.unicode(x)
 #for iter in x.value:
  #   print(iter)
+
+logging.basicConfig(filename='debug.log', filemode='w', format='%(asctime)s - %(levelname)s  -  %(message)s')
+logging.info('Beginning of Log')
 
 _N_MAIN_LINES = 1000
 _N_EVENTHANDLER_LINES = 500
@@ -360,6 +364,7 @@ def fuzzHTML_File(file):
         elif randInt > 25 and randInt < 35:
             resultList[i] = getExpandedUnicode()
         i = i + 1
+        logging.info('At %d: Char: %s', i, resultList[i])
 
     temp = ''.join(resultList)
 
@@ -380,6 +385,7 @@ def fuzzHTML_File(file):
 
 def insertJoinerUnicode(file, index):
     corruptString = Fuzzer.uWordJoiner
+    logging.info('At %d: Char: %s', index, corruptString)
 
     result = file[:index] + corruptString + file[index:]
 
@@ -387,13 +393,15 @@ def insertJoinerUnicode(file, index):
 
 def insertRightLeftReadingUnicode(file, index):
     corruptString = Fuzzer.uRLO
-
+    logging.info('At %d: Char: %s', index, corruptString)
+    
     result = file[:index] + corruptString + file[index:]
 
     return result
 
 def insertVowelSepUnicode(file, index):
     corruptString = Fuzzer.uMVS
+    logging.info('At %d: Char: %s', index, corruptString)
 
     result = file[:index] + corruptString + file[index:]
 
@@ -401,7 +409,8 @@ def insertVowelSepUnicode(file, index):
 
 def insertPrivateUseAreaUnicode(file, index):
     corruptString = Fuzzer.uPrivate
-
+    logging.info('At %d: Char: %s', index, corruptString)
+    
     result = file[:index] + corruptString + file[index:]
 
     return result
