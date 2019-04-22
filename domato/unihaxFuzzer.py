@@ -33,8 +33,8 @@ u1F82 = "\u1F82"
 uFB2C = "\uFB2C"
 
 
-def MalformBytes(character):
-    characterBytes = bytearray(character)
+def getMalformBytes(character):
+    characterBytes = bytearray(character, 'utf-8')
 
     if len(characterBytes) > 1:
         sliceSize = slice(0, len(characterBytes) - 1)

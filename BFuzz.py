@@ -14,7 +14,7 @@ def runWebTest():
         "Duration the browser process should wait before stopping(>=15 seconds to ensure full load of page):")
     browserType = int(browserType)
     checkValidBrowserType(browserType)
-    for root, folders, fileNames in os.walk("test_case"):
+    for root, folders, fileNames in os.walk("testingV5"):
         for fileName in fileNames:
             if not fileName.endswith('.html'):
                 continue

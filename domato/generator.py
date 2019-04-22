@@ -27,6 +27,7 @@ import clr
 import logging
 
 from grammar import Grammar
+from unihaxFuzzer import *
 from xmlparsing import *
 
 sys.path.append("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release")
@@ -56,7 +57,7 @@ from UniHax import *
 #for iter in x.value:
  #   print(iter)
 
-logging.basicConfig(filename='debug.log', filemode='w', format='%(asctime)s - %(levelname)s  -  %(message)s')
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, filemode='w', format='%(asctime)s - %(levelname)s  -  %(message)s')
 logging.info('Beginning of Log')
 
 _N_MAIN_LINES = 1000
@@ -359,12 +360,15 @@ def fuzzHTML_File(file):
 
     for character in resultList:
         randInt = random.randint(0, 100)
-        if randInt > 0 and randInt < 5:
+        if randInt > 0 and randInt < 24:
             resultList[i] = getBestFit(character)
+            logging.info('At %d: Char: %s', i, resultList[i])
         elif randInt > 25 and randInt < 35:
             resultList[i] = getExpandedUnicode()
+            #logging.info('At %d: Char: %s', i, resultList[i])
+        elif randInt > 55 and randInt < 75:
+            resultList[i] = getMalformBytes(character)
         i = i + 1
-        logging.info('At %d: Char: %s', i, resultList[i])
 
     temp = ''.join(resultList)
 
@@ -384,7 +388,7 @@ def fuzzHTML_File(file):
 
 
 def insertJoinerUnicode(file, index):
-    corruptString = Fuzzer.uWordJoiner
+    corruptString = uWordJoiner
     logging.info('At %d: Char: %s', index, corruptString)
 
     result = file[:index] + corruptString + file[index:]
@@ -392,7 +396,7 @@ def insertJoinerUnicode(file, index):
     return result
 
 def insertRightLeftReadingUnicode(file, index):
-    corruptString = Fuzzer.uRLO
+    corruptString = uRLO
     logging.info('At %d: Char: %s', index, corruptString)
     
     result = file[:index] + corruptString + file[index:]
@@ -400,7 +404,7 @@ def insertRightLeftReadingUnicode(file, index):
     return result
 
 def insertVowelSepUnicode(file, index):
-    corruptString = Fuzzer.uMVS
+    corruptString = uMVS
     logging.info('At %d: Char: %s', index, corruptString)
 
     result = file[:index] + corruptString + file[index:]
@@ -408,7 +412,7 @@ def insertVowelSepUnicode(file, index):
     return result
 
 def insertPrivateUseAreaUnicode(file, index):
-    corruptString = Fuzzer.uPrivate
+    corruptString = uPrivate
     logging.info('At %d: Char: %s', index, corruptString)
     
     result = file[:index] + corruptString + file[index:]
@@ -507,7 +511,7 @@ def generate_samples(grammar_dir, outfiles):
     # Add it as import
     htmlgrammar.add_import('cssgrammar', cssgrammar)
     jsgrammar.add_import('cssgrammar', cssgrammar)
-
+    
     for outfile in outfiles:
         result = generate_new_sample(template, htmlgrammar, cssgrammar,
                                      jsgrammar)
@@ -555,6 +559,7 @@ def main():
 
         outfiles = []
         for i in range(nsamples):
+            logging.info('Beginning of Log for fuzz-' + str(i) + '.html')
             outfiles.append(os.path.join(out_dir, 'fuzz-' + str(i) + '.html'))
 
         generate_samples(fuzzer_dir, outfiles)
