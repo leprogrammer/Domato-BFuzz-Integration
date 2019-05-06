@@ -30,35 +30,10 @@ from grammar import Grammar
 from unihaxFuzzer import *
 from xmlparsing import *
 
-sys.path.append("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release")
-clr.AddReference("UniHax")
+#logging.basicConfig(filename='debug.log', level=logging.DEBUG, filemode='w', format='%(asctime)s - %(levelname)s  -  %(message)s')
+#logging.info('Beginning of Log')
 
-from UniHax import *
-
-#PythonInterface.FindBestFit("z")
-#x = PythonInterface.GetBestFit()
-#print(x)
-
-
-#dll = cdll.LoadLibrary("D:\\GitRepos\\CSE637-Project\\UniHax\\bin\\x64\\Release\\UniHax.dll")
-#dll.bestfitResults.argtypes = [POINTER(VARIANT)]
-#v = VARIANT()
-#dll.test(120)
-
-#dll.bestfit(120)
-#dll.bestfitResults(v)
-#for x in v.value:
-#    print(x)
-
-#dll.unicode.argtypes = [POINTER(VARIANT)]
-#x = VARIANT()
-
-#dll.unicode(x)
-#for iter in x.value:
- #   print(iter)
-
-logging.basicConfig(filename='debug.log', level=logging.DEBUG, filemode='w', format='%(asctime)s - %(levelname)s  -  %(message)s')
-logging.info('Beginning of Log')
+format = logging.Formatter('%(asctime)s - %(levelname)s  -  %(message)s')
 
 _N_MAIN_LINES = 1000
 _N_EVENTHANDLER_LINES = 500
@@ -296,6 +271,15 @@ _SVG_TYPES = {
     'vkern': 'SVGElement'
 }
 
+def createNewLogger(name, fileName):
+    handler = logging.FileHandler(fileName)
+    handler.setFormatter(format)
+
+    log = logging.getLogger(name)
+    log.setLevel(logging.DEBUG)
+    log.addHandler(handler)
+
+    return log
 
 def generate_html_elements(ctx, n):
     for i in range(n):
@@ -334,6 +318,9 @@ def generate_function_body(jsgrammar, htmlctx, num_lines):
     js += jsgrammar._generate_code(num_lines, htmlctx['htmlvars'])
     js += '\n//endjs\n'
     js += 'var fuzzervars = {};\nfreememory()\n'
+
+    js = fuzzJavaScript(js)
+
     return js
 
 
@@ -353,7 +340,11 @@ def check_grammar(grammar):
             if tagname not in grammar._creators:
                 print('No creators for type ' + tagname)
 
-def fuzzHTML_File(file):
+def fuzzJavaScript(code):
+
+    return "x"
+
+def fuzzHTML_File(file, logger):
     size = len(file)
     resultList = list(file)
     i = 0
@@ -362,65 +353,73 @@ def fuzzHTML_File(file):
         randInt = random.randint(0, 100)
         if randInt > 0 and randInt < 24:
             resultList[i] = getBestFit(character)
-            logging.info('At %d: Char: %s', i, resultList[i])
+            logger.debug('At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 25 and randInt < 35:
             resultList[i] = getExpandedUnicode()
-            #logging.info('At %d: Char: %s', i, resultList[i])
+            logger.info('At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 55 and randInt < 75:
             resultList[i] = getMalformBytes(character)
         i = i + 1
 
     temp = ''.join(resultList)
 
-    index = random.randint(0, size)
+    index = random.randint(0, size - 1)
     chance = random.randint(0, 100)
 
     if chance > 25 and chance < 30:
-        temp = insertJoinerUnicode(temp, index)
+        temp = insertJoinerUnicode(temp, index, logger)
     elif chance > 5 and chance < 9:
-        temp = insertPrivateUseAreaUnicode(temp, index)
+        temp = insertPrivateUseAreaUnicode(temp, index, logger)
     elif chance > 35 and chance < 40:
-        temp = insertRightLeftReadingUnicode(temp, index)
+        temp = insertRightLeftReadingUnicode(temp, index, logger)
     elif chance > 78 and chance < 87:
-        temp = insertVowelSepUnicode(temp, index)
+        temp = insertVowelSepUnicode(temp, index, logger)
 
     return temp
 
 
-def insertJoinerUnicode(file, index):
+def insertJoinerUnicode(file, index, logger):
     corruptString = uWordJoiner
-    logging.info('At %d: Char: %s', index, corruptString)
+    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
 
     result = file[:index] + corruptString + file[index:]
 
     return result
 
-def insertRightLeftReadingUnicode(file, index):
+def insertRightLeftReadingUnicode(file, index, logger):
     corruptString = uRLO
-    logging.info('At %d: Char: %s', index, corruptString)
+    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
     
     result = file[:index] + corruptString + file[index:]
 
     return result
 
-def insertVowelSepUnicode(file, index):
+def insertVowelSepUnicode(file, index, logger):
     corruptString = uMVS
-    logging.info('At %d: Char: %s', index, corruptString)
+    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
 
     result = file[:index] + corruptString + file[index:]
 
     return result
 
-def insertPrivateUseAreaUnicode(file, index):
+def insertPrivateUseAreaUnicode(file, index, logger):
     corruptString = uPrivate
-    logging.info('At %d: Char: %s', index, corruptString)
+    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
     
     result = file[:index] + corruptString + file[index:]
 
     return result
 
+def getPresetCharacter():
+    charList = getUnicodeArray()
 
-def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
+    size = len(charList)
+
+    index = random.randint(0, size - 1)
+    return charList[index]
+
+
+def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar, logger):
     """Parses grammar rules from string.
 
     Args:
@@ -451,7 +450,7 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar):
     )
     generate_html_elements(htmlctx, _N_ADDITIONAL_HTMLVARS)
 
-    html = fuzzHTML_File(html)
+    html = fuzzHTML_File(html, logger)
 
     result = result.replace('<cssfuzzer>', css)
     result = result.replace('<htmlfuzzer>', html)
@@ -513,8 +512,9 @@ def generate_samples(grammar_dir, outfiles):
     jsgrammar.add_import('cssgrammar', cssgrammar)
     
     for outfile in outfiles:
+        logger = createNewLogger(outfile, outfile + ".log")
         result = generate_new_sample(template, htmlgrammar, cssgrammar,
-                                     jsgrammar)
+                                     jsgrammar, logger)
 
         if result is not None:
             print('Writing a sample to ' + outfile)
@@ -559,7 +559,7 @@ def main():
 
         outfiles = []
         for i in range(nsamples):
-            logging.info('Beginning of Log for fuzz-' + str(i) + '.html')
+            #logging.info('Beginning of Log for fuzz-' + str(i) + '.html')
             outfiles.append(os.path.join(out_dir, 'fuzz-' + str(i) + '.html'))
 
         generate_samples(fuzzer_dir, outfiles)

@@ -32,6 +32,10 @@ u1F82 = "\u1F82"
 
 uFB2C = "\uFB2C"
 
+def getUnicodeArray():
+    x = [u0390, u1F82, uBOM, uDAAD, uDEAD, uFB2C, uFDFA, uFullwidthSolidus, uIdnaSs, uMVS, uNotACharacter, uPrivate, uReservedCodePoint, uRLO, uUnassigned, uWordJoiner]
+    return x
+
 
 def getMalformBytes(character):
     characterBytes = bytearray(character, 'utf-8')
