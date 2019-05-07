@@ -309,7 +309,7 @@ def add_html_ids(matchobj, ctx):
         return matchobj.group(0)
 
 
-def generate_function_body(jsgrammar, htmlctx, num_lines):
+def generate_function_body(jsgrammar, htmlctx, num_lines, logger):
     js = ''
     js += 'var fuzzervars = {};\n\n'
     js += "SetVariable(fuzzervars, window, 'Window');\nSetVariable(fuzzervars, document, 'Document');\nSetVariable(fuzzervars, document.body.firstChild, 'Element');\n\n"
@@ -319,7 +319,7 @@ def generate_function_body(jsgrammar, htmlctx, num_lines):
     js += '\n//endjs\n'
     js += 'var fuzzervars = {};\nfreememory()\n'
 
-    js = fuzzJavaScript(js)
+    js = fuzzJavaScript(js, logger)
 
     return js
 
@@ -340,9 +340,68 @@ def check_grammar(grammar):
             if tagname not in grammar._creators:
                 print('No creators for type ' + tagname)
 
-def fuzzJavaScript(code):
+def fuzzJavaScript(code, logger):
 
-    return "x"
+    variableName = ' var000'
+    notFoundCount = 0
+    newCode = code
+    
+    for i in range(1, 100):
+        variable = variableName
+        if i < 10:
+            variable = variableName + "0" + str(i) + ' '
+        else:
+            variable = variableName + str(i) + ' '
+
+        if code.find(variable) != -1:    
+            notFoundCount = 0
+
+            prob = random.randint(0, 100)
+
+            if prob >= 0 and prob <= 10:#replace word with 20% chance
+                newWord = generateUnicodeWord()
+
+                logger.info('JavaScriptFuzz: Replacing: %s With: %s', variable, newWord.encode('utf-8'))
+
+                newCode = newCode.replace(variable, newWord)
+
+        else:
+            notFoundCount = notFoundCount + 1
+
+        if notFoundCount > 4: 
+            break
+
+
+    return newCode
+
+def generateUnicodeWord():
+    wordSize = random.randint(4, 15)
+
+    string = ' '
+
+    for i in range(wordSize):
+        prob = random.randint(0, 100)
+
+        if prob >= 0 and prob < 30:
+            unicodeChar = getExpandedUnicode()
+            string = string + unicodeChar
+        
+        elif prob >= 30 and prob < 50:
+            unicodeChar = getPresetCharacter()
+            unicodeChar = unicodeChar.encode('utf-8').strip()
+            unicodeChar = unicodeChar.decode('unicode_escape')
+            #string = string + unicodeChar
+
+        elif prob >= 50 and prob < 100:
+            randomAscii = random.randint(0, 127)
+            randomAscii = chr(randomAscii)
+            unicodeChar = getBestFit(randomAscii)
+            string = string + unicodeChar
+
+    string = string + ' '
+        
+    return string
+
 
 def fuzzHTML_File(file, logger):
     size = len(file)
@@ -353,10 +412,10 @@ def fuzzHTML_File(file, logger):
         randInt = random.randint(0, 100)
         if randInt > 0 and randInt < 24:
             resultList[i] = getBestFit(character)
-            logger.debug('At %d: Char: %s', i, resultList[i].encode('utf-8'))
+            logger.debug('HTML_Fuzz: At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 25 and randInt < 35:
             resultList[i] = getExpandedUnicode()
-            logger.info('At %d: Char: %s', i, resultList[i].encode('utf-8'))
+            logger.debug('HTML_Fuzz: At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 55 and randInt < 75:
             resultList[i] = getMalformBytes(character)
         i = i + 1
@@ -380,7 +439,7 @@ def fuzzHTML_File(file, logger):
 
 def insertJoinerUnicode(file, index, logger):
     corruptString = uWordJoiner
-    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
+    logger.info('HTML_Fuzz: At %d: Char: %s', index, corruptString.encode('utf-8'))
 
     result = file[:index] + corruptString + file[index:]
 
@@ -388,7 +447,7 @@ def insertJoinerUnicode(file, index, logger):
 
 def insertRightLeftReadingUnicode(file, index, logger):
     corruptString = uRLO
-    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
+    logger.info('HTML_Fuzz: At %d: Char: %s', index, corruptString.encode('utf-8'))
     
     result = file[:index] + corruptString + file[index:]
 
@@ -396,7 +455,7 @@ def insertRightLeftReadingUnicode(file, index, logger):
 
 def insertVowelSepUnicode(file, index, logger):
     corruptString = uMVS
-    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
+    logger.info('HTML_Fuzz: At %d: Char: %s', index, corruptString.encode('utf-8'))
 
     result = file[:index] + corruptString + file[index:]
 
@@ -404,7 +463,7 @@ def insertVowelSepUnicode(file, index, logger):
 
 def insertPrivateUseAreaUnicode(file, index, logger):
     corruptString = uPrivate
-    logger.info('At %d: Char: %s', index, corruptString.encode('utf-8'))
+    logger.info('HTML_Fuzz: At %d: Char: %s', index, corruptString.encode('utf-8'))
     
     result = file[:index] + corruptString + file[index:]
 
@@ -466,7 +525,7 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar, logger):
             handlers = True
         result = result.replace(
             '<jsfuzzer>',
-            generate_function_body(jsgrammar, htmlctx, numlines),
+            generate_function_body(jsgrammar, htmlctx, numlines, logger),
             1
         )
 

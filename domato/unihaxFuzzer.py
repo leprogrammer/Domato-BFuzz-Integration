@@ -1,36 +1,36 @@
 #
 
-uBOM = '\uFEFF'
+uBOM = '\\uFEFF'
 
-uRLO = '\u202E'
+uRLO = '\\u202E'
 
-uMVS = "\u180E"
+uMVS = "\\u180E"
 
-uWordJoiner = "\u2060"
+uWordJoiner = "\\u2060"
 
-uReservedCodePoint = "\uFEFE"
+uReservedCodePoint = "\\uFEFE"
 
-uNotACharacter = "\uFFFF"
+uNotACharacter = "\\uFFFF"
 
-uUnassigned = "\u0FED"
+uUnassigned = "\\u0FED"
 
-uDEAD = "\uDEAD"
+uDEAD = "\\uDEAD"
 
-uDAAD = "\uDAAD"
+uDAAD = "\\uDAAD"
 
-uPrivate = "\uF8FF"
+uPrivate = "\\uF8FF"
 
-uFullwidthSolidus = "\uFF0F"
+uFullwidthSolidus = "\\uFF0F"
 
-uIdnaSs = "\u00DF"
+uIdnaSs = "\\u00DF"
 
-uFDFA = "\uFDFA"
+uFDFA = "\\uFDFA"
 
-u0390 = "\u0390"
+u0390 = "\\u0390"
 
-u1F82 = "\u1F82"
+u1F82 = "\\u1F82"
 
-uFB2C = "\uFB2C"
+uFB2C = "\\uFB2C"
 
 def getUnicodeArray():
     x = [u0390, u1F82, uBOM, uDAAD, uDEAD, uFB2C, uFDFA, uFullwidthSolidus, uIdnaSs, uMVS, uNotACharacter, uPrivate, uReservedCodePoint, uRLO, uUnassigned, uWordJoiner]
