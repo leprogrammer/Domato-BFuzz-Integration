@@ -1,0 +1,190 @@
+<Bestfit>
+  <Mapping>
+    <Unicode>0C00</Unicode>
+    <Name>TELUGU SIGN COMBINING CANDRABINDUABOVE</Name>
+  </Mapping>
+  <Mapping>
+    <Unicode>0C01</Unicode> 
+    <Name>TELUGU SIGN CANDRABINDU</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C02</Unicode> 
+  <Name>TELUGU SIGN ANUSVARA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C03</Unicode> 
+  <Name>TELUGU SIGN VISARGA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C04</Unicode> 
+  <Name>TELUGU SIGN COMBINING ANUSVARA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C05</Unicode> 
+  <Name>TELUGU LETTER A</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C06</Unicode> 
+  <Name>TELUGU LETTER AA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C07</Unicode> 
+  <Name>TELUGU LETTER I</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C08</Unicode> 
+  <Name>TELUGU LETTER II</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C09</Unicode> 
+  <Name>TELUGU LETTER U</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C0A</Unicode> 
+  <Name>TELUGU LETTER UU</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C0B</Unicode> 
+  <Name>TELUGU LETTER VOCALIC R</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C0C</Unicode> 
+  <Name>TELUGU LETTER VOCALIC L</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C0E</Unicode> 
+  <Name>TELUGU LETTER E</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C0F</Unicode> 
+  <Name>TELUGU LETTER EE</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C10</Unicode> 
+  <Name>TELUGU LETTER AI</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C12</Unicode> 
+  <Name>TELUGU LETTER O</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C13</Unicode> 
+  <Name>TELUGU LETTER OO</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C14</Unicode> 
+  <Name>TELUGU LETTER AUConsonants</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C15</Unicode> 
+  <Name>TELUGU LETTER KA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C16</Unicode> 
+  <Name>TELUGU LETTER KHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C17</Unicode> 
+  <Name>TELUGU LETTER GA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C18</Unicode> 
+  <Name>TELUGU LETTER GHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C19</Unicode> 
+  <Name>TELUGU LETTER NGA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1A</Unicode> 
+  <Name>TELUGU LETTER CA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1B</Unicode> 
+  <Name>TELUGU LETTER CHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1C</Unicode> 
+  <Name>TELUGU LETTER JA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1D</Unicode> 
+  <Name>TELUGU LETTER JHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1E</Unicode> 
+  <Name>TELUGU LETTER NYA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C1F</Unicode> 
+  <Name>TELUGU LETTER TTA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C20</Unicode> 
+  <Name>TELUGU LETTER TTHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C21</Unicode> 
+  <Name>TELUGU LETTER DDA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C22</Unicode> 
+  <Name>TELUGU LETTER DDHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C23</Unicode> 
+  <Name>TELUGU LETTER NNA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C24</Unicode> 
+  <Name>TELUGU LETTER TA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C25</Unicode> 
+  <Name>TELUGU LETTER THA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C26</Unicode> 
+  <Name>TELUGU LETTER DA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C27</Unicode> 
+  <Name>TELUGU LETTER DHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C28</Unicode> 
+  <Name>TELUGU LETTER NA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2A</Unicode> 
+  <Name>TELUGU LETTER PA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2B</Unicode> 
+  <Name>TELUGU LETTER PHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2C</Unicode> 
+  <Name>TELUGU LETTER BA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2D</Unicode> 
+  <Name>TELUGU LETTER BHA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2E</Unicode> 
+  <Name>TELUGU LETTER MA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C2F</Unicode> 
+  <Name>TELUGU LETTER YA</Name>
+  </Mapping>
+<Mapping> 
+  <Unicode>0C30</Unicode> 
+  <Name>TELUGU LETTER RA</Name>
+  </Mapping> 
+<Mapping> 
+  <Unicode>0C31</Unicode> 
+  <Name>TELUGU LETTER RRA</Name>
+  </Mapping>
+</Bestfit>
