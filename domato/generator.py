@@ -415,7 +415,7 @@ def fuzzHTML_File(file, logger):
             logger.debug('HTML_Fuzz: At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 55 and randInt < 75:
             resultList[i] = getMalformBytes(character)
-        else:
+        elif randInt >= 75 and randInt < 85:
             resultList[i] = getUChar()
         i = i + 1
 
