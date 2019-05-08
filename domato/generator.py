@@ -22,8 +22,6 @@ import os
 import re
 import random
 import sys
-import comtypes
-import clr
 import logging
 
 from grammar import Grammar
@@ -369,7 +367,7 @@ def fuzzJavaScript(code, logger):
         else:
             notFoundCount = notFoundCount + 1
 
-        if notFoundCount > 4: 
+        if notFoundCount >= 3: 
             break
 
 
@@ -388,10 +386,8 @@ def generateUnicodeWord():
             string = string + unicodeChar
         
         elif prob >= 30 and prob < 50:
-            unicodeChar = getPresetCharacter()
-            unicodeChar = unicodeChar.encode('utf-8').strip()
-            unicodeChar = unicodeChar.decode('unicode_escape')
-            #string = string + unicodeChar
+            unicodeChar = getUChar()
+            string = string + unicodeChar
 
         elif prob >= 50 and prob < 100:
             randomAscii = random.randint(0, 127)
@@ -419,6 +415,8 @@ def fuzzHTML_File(file, logger):
             logger.debug('HTML_Fuzz: At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 55 and randInt < 75:
             resultList[i] = getMalformBytes(character)
+        else:
+            resultList[i] = getUChar()
         i = i + 1
 
     temp = ''.join(resultList)

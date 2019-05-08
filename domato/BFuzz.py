@@ -3,7 +3,6 @@
 import os
 import subprocess
 import sys
-import psutil
 import logging
 import time
 from generator import generate_samples, createNewLogger
@@ -26,11 +25,11 @@ def runWebTest():
     jsFlag = input("Fuzz the JavaScript portion of the file? (0 for No, 1 for Yes):")
     jsFlag = int(jsFlag)
 
-    print("Number of files to generate for a test case: ")
+    print("Number of files to generate for a test round: ")
     fileCount = input(">>")
     fileCount = int(fileCount)
 
-    print("Number of test cases:")
+    print("Number of test rounds:")
     testCaseCount = input(">>")
     testCaseCount = int(testCaseCount)
 

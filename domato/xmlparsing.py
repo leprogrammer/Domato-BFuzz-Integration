@@ -9,8 +9,8 @@ bestFitRoot = bestFitTree.getroot()
 unicodeTree = ET.parse('xml/expandedUnicode.xml')
 unicodeRoot = unicodeTree.getroot()
 
-teluguTree = ET.parse('xml/expandedUnicode_Telugu.xml')
-teluguRoot = teluguTree.getroot()
+ucharTree = ET.parse('xml/expandedUnicode_Telugu.xml')
+ucharRoot = ucharTree.getroot()
 
 def getExpandedUnicode():
     unicodeList = []
@@ -55,9 +55,9 @@ def getBestFit(character):
         #print('\\u0263'.encode('utf-8').decode('unicode_escape'))
         return character
 
-def getTelugu(character):
+def getUChar():
     unicodeList = []
-    for unicode in teluguRoot.findall('Mapping'):
+    for unicode in ucharRoot.findall('Mapping'):
         string = '\\u' + unicode.find('Unicode').text
             
         unicodeText = string.encode('utf-8')
