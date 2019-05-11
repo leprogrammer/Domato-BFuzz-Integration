@@ -22,8 +22,6 @@ import os
 import re
 import random
 import sys
-import comtypes
-import clr
 import logging
 
 from grammar import Grammar
@@ -309,7 +307,7 @@ def add_html_ids(matchobj, ctx):
         return matchobj.group(0)
 
 
-def generate_function_body(jsgrammar, htmlctx, num_lines, logger):
+def generate_function_body(jsgrammar, htmlctx, num_lines, logger, jsFlag):
     js = ''
     js += 'var fuzzervars = {};\n\n'
     js += "SetVariable(fuzzervars, window, 'Window');\nSetVariable(fuzzervars, document, 'Document');\nSetVariable(fuzzervars, document.body.firstChild, 'Element');\n\n"
@@ -319,7 +317,8 @@ def generate_function_body(jsgrammar, htmlctx, num_lines, logger):
     js += '\n//endjs\n'
     js += 'var fuzzervars = {};\nfreememory()\n'
 
-    js = fuzzJavaScript(js, logger)
+    if jsFlag == 1:
+        js = fuzzJavaScript(js, logger)
 
     return js
 
@@ -349,9 +348,9 @@ def fuzzJavaScript(code, logger):
     for i in range(1, 100):
         variable = variableName
         if i < 10:
-            variable = variableName + "0" + str(i) + ' '
+            variable = variableName + "0" + str(i)
         else:
-            variable = variableName + str(i) + ' '
+            variable = variableName + str(i)
 
         if code.find(variable) != -1:    
             notFoundCount = 0
@@ -368,7 +367,7 @@ def fuzzJavaScript(code, logger):
         else:
             notFoundCount = notFoundCount + 1
 
-        if notFoundCount > 4: 
+        if notFoundCount >= 3: 
             break
 
 
@@ -387,10 +386,8 @@ def generateUnicodeWord():
             string = string + unicodeChar
         
         elif prob >= 30 and prob < 50:
-            unicodeChar = getPresetCharacter()
-            unicodeChar = unicodeChar.encode('utf-8').strip()
-            unicodeChar = unicodeChar.decode('unicode_escape')
-            #string = string + unicodeChar
+            unicodeChar = getUChar()
+            string = string + unicodeChar
 
         elif prob >= 50 and prob < 100:
             randomAscii = random.randint(0, 127)
@@ -398,7 +395,7 @@ def generateUnicodeWord():
             unicodeChar = getBestFit(randomAscii)
             string = string + unicodeChar
 
-    string = string + ' '
+    string = string
         
     return string
 
@@ -418,6 +415,8 @@ def fuzzHTML_File(file, logger):
             logger.debug('HTML_Fuzz: At %d: Char: %s', i, resultList[i].encode('utf-8'))
         elif randInt > 55 and randInt < 75:
             resultList[i] = getMalformBytes(character)
+        elif randInt >= 75 and randInt < 85:
+            resultList[i] = getUChar()
         i = i + 1
 
     temp = ''.join(resultList)
@@ -478,7 +477,7 @@ def getPresetCharacter():
     return charList[index]
 
 
-def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar, logger):
+def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar, logger, jsFlag):
     """Parses grammar rules from string.
 
     Args:
@@ -525,14 +524,14 @@ def generate_new_sample(template, htmlgrammar, cssgrammar, jsgrammar, logger):
             handlers = True
         result = result.replace(
             '<jsfuzzer>',
-            generate_function_body(jsgrammar, htmlctx, numlines, logger),
+            generate_function_body(jsgrammar, htmlctx, numlines, logger, jsFlag),
             1
         )
 
     return result
 
 
-def generate_samples(grammar_dir, outfiles):
+def generate_samples(grammar_dir, outfiles, jsFlag):
     """Generates a set of samples and writes them to the output files.
 
     Args:
@@ -573,7 +572,7 @@ def generate_samples(grammar_dir, outfiles):
     for outfile in outfiles:
         logger = createNewLogger(outfile, outfile + ".log")
         result = generate_new_sample(template, htmlgrammar, cssgrammar,
-                                     jsgrammar, logger)
+                                     jsgrammar, logger, jsFlag)
 
         if result is not None:
             print('Writing a sample to ' + outfile)
@@ -621,11 +620,11 @@ def main():
             #logging.info('Beginning of Log for fuzz-' + str(i) + '.html')
             outfiles.append(os.path.join(out_dir, 'fuzz-' + str(i) + '.html'))
 
-        generate_samples(fuzzer_dir, outfiles)
+        generate_samples(fuzzer_dir, outfiles, 1)
 
     elif len(sys.argv) > 1:
         outfile = sys.argv[1]
-        generate_samples(fuzzer_dir, [outfile])
+        generate_samples(fuzzer_dir, [outfile], 0)
 
     else:
         print('Arguments missing')

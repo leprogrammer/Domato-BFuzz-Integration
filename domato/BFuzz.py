@@ -3,7 +3,6 @@
 import os
 import subprocess
 import sys
-import psutil
 import logging
 import time
 from generator import generate_samples, createNewLogger
@@ -23,11 +22,14 @@ def runWebTest():
     browserType = int(browserType)
     checkValidBrowserType(browserType)
 
-    print("Number of files to generate for a test case: ")
+    jsFlag = input("Fuzz the JavaScript portion of the file? (0 for No, 1 for Yes):")
+    jsFlag = int(jsFlag)
+
+    print("Number of files to generate for a test round: ")
     fileCount = input(">>")
     fileCount = int(fileCount)
 
-    print("Number of test cases:")
+    print("Number of test rounds:")
     testCaseCount = input(">>")
     testCaseCount = int(testCaseCount)
 
@@ -40,7 +42,7 @@ def runWebTest():
             #logging.info('Beginning of Log for fuzz-' + str(i) + '.html')
             outfiles.append(os.path.join(outputDirectory + str(x), 'fuzz-' + str(i) + '.html'))
 
-        generate_samples(dir_path, outfiles)
+        generate_samples(dir_path, outfiles, jsFlag)
 
         for root, folders, fileList in os.walk(outputDirectory + str(x)):
             for fileName in fileList:

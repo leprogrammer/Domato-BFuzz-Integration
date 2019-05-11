@@ -128,3 +128,5 @@ domato/test_v2\.html
 *.lock
 
 *.ide
+
+domato/\.vscode/\.ropeproject/
